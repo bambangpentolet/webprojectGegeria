@@ -4,6 +4,7 @@ include "koneksi.php"; // Load file koneksi.php
 $username = $_POST['username']; // Ambil value username yang dikirim dari form
 $password = $_POST['password']; // Ambil value password yang dikirim dari form
 $password = md5($password); // Kita enkripsi (encrypt) password tadi dengan md5
+// usahakan merubah enkripsi md5 ke bcrypt
 // Buat query untuk mengecek apakah ada data user dengan username dan password yang dikirim dari form
 $sql = $pdo->prepare("SELECT * FROM user WHERE username=:a AND password=:b");
 $sql->bindParam(':a', $username);
