@@ -1,13 +1,24 @@
 <?php
-// include database connection file
-include_once("koneksiCrud_input_data_siswa.php");
+include("koneksiCrud_input_data_siswa.php");
 
-// Get id from URL to delete that user
-$id = $_GET['nis'];
+if( isset($_POST['nis']) ){
 
-// Delete user row from table based on given id
-$result = mysqli_query($mysqli, "DELETE FROM siswa WHERE nis=$nis");
+    // ambil id dari query string
+    $nis = $_POST['nis'];
 
-// After delete redirect to Home, so that latest user list will be displayed.
-header("Location:dataSiswa.php");
+    // buat query hapus
+    $sql = "DELETE FROM siswa WHERE nis=$nis";
+    $query = mysqli_query($mysqli, $sql);
+
+    // apakah query hapus berhasil?
+    if( $query ){
+        header('Location: dataSiswa.php');
+    } else {
+        die("gagal menghapus...");
+    }
+
+} else {
+    die("akses dilarang...");
+}
+
 ?>
