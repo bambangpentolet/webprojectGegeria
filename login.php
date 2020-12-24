@@ -23,6 +23,6 @@ if( ! empty($data)){ // Jika tidak sama dengan empty (kosong)
   // Buat sebuah cookie untuk menampung data pesan kesalahan
   setcookie("message", "Maaf, Username atau Password salah", time()+3600);
   
-  header("location: index.php"); // Redirect kembali ke halaman index.php
+  header("location: index.html"); // Redirect kembali ke halaman index.php
 }
 ?>
