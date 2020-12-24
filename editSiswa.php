@@ -5,6 +5,8 @@ include_once("koneksiCrud_input_data_siswa.php");
 // Check if form is submitted for user update, then redirect to homepage after update
 if(isset($_POST['update']))
 {   
+
+    print_r($_POST);
     $nis = $_POST['nis'];
 
     $nama=$_POST['nama'];
@@ -12,10 +14,10 @@ if(isset($_POST['update']))
     $jurusan=$_POST['jurusan'];
 
     // update user data
-    $result = mysqli_query($mysqli, "UPDATE users SET nama='$nama',alamat='$alamat',jurusan='$jurusan' WHERE nis=$nis");
+    $result = mysqli_query($mysqli, "UPDATE users SET nama='$nama',alamat='$alamat',jurusan='$jurusan' WHERE nis='$nis'");
 
     // Redirect to homepage to display updated user in list
-    header("Location: dataSiswa.php");
+    header("Location: dataSiswa.php?nis=$nis");
 }
 ?>
 <?php
@@ -45,8 +47,8 @@ while($user_data = mysqli_fetch_array($result))
     <form name="update_user" method="post" action="editSiswa.php">
         <table border="0">
             <tr> 
-                <td>Name</td>
-                <td><input type="text" name="name" value=<?php echo $nama;?>></td>
+                <td>Nama</td>
+                <td><input type="text" name="nama" value=<?php echo $nama;?>></td>
             </tr>
             <tr> 
                 <td>Alamat</td>
@@ -54,7 +56,7 @@ while($user_data = mysqli_fetch_array($result))
             </tr>
             <tr> 
                 <td>Jurusan</td>
-                <td><input type="text" name="mobile" value=<?php echo $jurusan;?>></td>
+                <td><input type="text" name="jurusan" value=<?php echo $jurusan;?>></td>
             </tr>
             <tr>
                 <td><input type="hidden" name="nis" value=<?php echo $_GET['nis'];?>></td>
