@@ -14,7 +14,7 @@ if(isset($_POST['update']))
     $jurusan=$_POST['jurusan'];
 
     // update user data
-    $result = mysqli_query($mysqli, "UPDATE users SET nama='$nama',alamat='$alamat',jurusan='$jurusan' WHERE nis='$nis'");
+    $result = mysqli_query($mysqli, "UPDATE siswa SET nama='$nama',alamat='$alamat',jurusan='$jurusan' WHERE nis='$nis'");
 
     // Redirect to homepage to display updated user in list
     header("Location: dataSiswa.php?nis=$nis");
