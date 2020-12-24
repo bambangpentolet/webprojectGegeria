@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start session nya
-include "koneksi.php"; // Load file koneksi.php
+include "koneksiLogin.php"; // Load file koneksi.php
 $username = $_POST['username']; // Ambil value username yang dikirim dari form
 $password = $_POST['password']; // Ambil value password yang dikirim dari form
 $password = md5($password); // Kita enkripsi (encrypt) password tadi dengan md5
