@@ -3,10 +3,9 @@
 include_once("koneksiCrud_input_data_siswa.php");
 
 // Check if form is submitted for user update, then redirect to homepage after update
-if(isset($_POST['update']))
+if(isset($_POST['simpan']))
 {   
     $nis = $_POST['nis'];
-
     $nama=$_POST['nama'];
     $alamat=$_POST['alamat'];
     $jurusan=$_POST['jurusan'];
@@ -21,28 +20,28 @@ if(isset($_POST['update']))
 <?php
 // Display selected user data based on id
 // Getting id from url
-$id = $_GET['nis'];
+$nis = $_GET['nis'];
 
 // Fetech user data based on id
 $result = mysqli_query($mysqli, "SELECT * FROM siswa WHERE nis=$nis");
 
-while($user_data = mysqli_fetch_array($result))
+while($datasiswa = mysqli_fetch_array($result))
 {
-    $nama = $user_data['nama'];
-    $alamat = $user_data['alamat'];
-    $jurusan = $user_data['jurusan'];
+    $nama = $datasiswa['nama'];
+    $alamat = $datasiswa['alamat'];
+    $jurusan = $datasiswa['jurusan'];
 }
 ?>
 <html>
 <head>  
-    <title>Edit User Data</title>
+    <title>Edit Siswa</title>
 </head>
 
 <body>
-    <a href="dataSiswa.php">Home</a>
+    <a href="dataSiswa.php">kembali ke Data Siswa</a>
     <br/><br/>
 
-    <form name="update_user" method="post" action="editSiswa.php">
+    <form name="simpan" method="post" action="editSiswa.php">
         <table border="0">
             <tr> 
                 <td>Nama</td>
@@ -58,7 +57,7 @@ while($user_data = mysqli_fetch_array($result))
             </tr>
             <tr>
                 <td><input type="hidden" name="id" value=<?php echo $_GET['nis'];?>></td>
-                <td><input type="submit" name="update" value="Update"></td>
+                <td><input type="submit" name="simpan" value="Simpan"></td>
             </tr>
         </table>
     </form>
