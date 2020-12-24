@@ -9,12 +9,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");
 
 <html>
 <head>    
-    <title>Homepage</title>
+    <title>Data Siswa</title>
 </head>
 
 <body>
-<a href="add.php">Add New User</a><br/><br/>
-
+<a href="add.php">Tambah Siswa</a><br/><br/>
+<h3>Data Siswa yang ikut PSG</h3>
     <table width='80%' border=1>
 
     <tr>
