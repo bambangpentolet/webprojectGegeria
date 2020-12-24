@@ -13,7 +13,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");
 </head>
 
 <body>
-<a href="add.php">Tambah Siswa</a><br/><br/>
+<a href="tambahSiswa.php">Tambah Siswa</a><br/><br/>
 <h3>Data Siswa yang ikut PSG</h3>
     <table width='80%' border=1>
 
@@ -27,7 +27,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");
         echo "<td>".$datasiswa['nama']."</td>";
         echo "<td>".$datasiswa['alamat']."</td>";
         echo "<td>".$datasiswa['jurusan']."</td>";    
-        echo "<td><a href='edit.php?id=$user_data[id]'>Edit</a> | <a href='delete.php?id=$user_data[id]'>Delete</a></td></tr>";        
+        echo "<td><a href='edit.php?id=$user_data[nis]'>Edit</a> | <a href='delete.php?id=$user_data[nis]'>Delete</a></td></tr>";        
     }
     ?>
     </table>
