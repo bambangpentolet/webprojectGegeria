@@ -1,0 +1,5 @@
+bug aplikasi web
+
+1. tidak bisa delete record pada tabel
+2. ketika edit record data nama menjadi hilang sebagian
+3. bisa mengakses Data Siswa tanpa login (bahaya)
