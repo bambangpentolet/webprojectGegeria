@@ -30,7 +30,7 @@ $no_urut = 0;
         echo "<td>".$datasiswa['nama']."</td>";
         echo "<td>".$datasiswa['alamat']."</td>";
         echo "<td>".$datasiswa['jurusan']."</td>";    
-        echo "<td><a href='editSiswa.php?id=$user_data[nis]'>Edit</a> | <a href='deleteSiswa.php?id=$user_data[nis]'>Delete</a></td></tr>";
+        echo "<td><a href='editSiswa.php?nis=$datasiswa[nis]'>Edit</a> | <a href='deleteSiswa.php?nis=$datasiswa[nis]'>Delete</a></td></tr>";
     }
     ?>
     </table>
