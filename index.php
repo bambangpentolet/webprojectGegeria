@@ -9,6 +9,7 @@ if(isset($_SESSION['username'])){ // Jika session username ada berarti dia sudah
 <html>
 <head>
   <title>Halaman Sebelum Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Silahkan login terlebih dahulu...</h1>
