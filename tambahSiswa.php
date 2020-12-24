@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <a href="dataSiswa.php">Go to Home</a>
+    <a href="dataSiswa.php">kembali ke Data Siswa</a>
     <br/><br/>
 
     <form action="tambahSiswa.php" method="post" name="form1">

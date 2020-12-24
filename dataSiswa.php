@@ -5,6 +5,7 @@ include("modularitas.php");
 
 // Fetch all siswa data from database
 $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");
+$no_urut = 0;
 ?>
 
 <html>
@@ -15,19 +16,21 @@ $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");
 <body>
 <a href="tambahSiswa.php">Tambah Siswa</a><br/><br/>
 <h3>Data Siswa yang ikut PSG</h3>
-    <table width='80%' border=1>
+    <table width='50%' border=1>
 
     <tr>
-        <th>NIS</th> <th>Nama</th> <th>Alamat</th> <th>Jurusan</th> <th>Update</th>
+    <th>No.</th> <th>NIS</th> <th>Nama</th> <th>Alamat</th> <th>Jurusan</th> <th>Update</th>
     </tr>
     <?php  
     while($datasiswa = mysqli_fetch_array($result)) {         
+        $no_urut++;
         echo "<tr>";
+        echo "<td>$no_urut</td>";
         echo "<td>".$datasiswa['nis']."</td>";
         echo "<td>".$datasiswa['nama']."</td>";
         echo "<td>".$datasiswa['alamat']."</td>";
         echo "<td>".$datasiswa['jurusan']."</td>";    
-        echo "<td><a href='edit.php?id=$user_data[nis]'>Edit</a> | <a href='delete.php?id=$user_data[nis]'>Delete</a></td></tr>";        
+        echo "<td><a href='editSiswa.php?id=$user_data[nis]'>Edit</a> | <a href='deleteSiswa.php?id=$user_data[nis]'>Delete</a></td></tr>";
     }
     ?>
     </table>
