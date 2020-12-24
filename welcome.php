@@ -13,7 +13,10 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
 <body>
   <h1>Selamat datang <?php echo $_SESSION['nama']; ?></h1>
   <h4>Anda berhasil login ke dalam aplikasi</h4>
-  
-  <a href="logout.php" style="color:red">Logout</a>
+
+  <form method="post" action="logout.php">
+  <button type="submit" style="color:red">Logout</button>
+  </form>
+
 </body>
 </html>
