@@ -7,3 +7,5 @@ $password = "";
 $database = "crud_db_siswa";
 
 $mysqli = mysqli_connect($host, $username, $password, $database); 
+
+?>
