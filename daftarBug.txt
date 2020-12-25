@@ -1,6 +1,19 @@
-bug aplikasi web
-
+bug aplikasi web :
 1. ketika edit record, data nama menjadi hilang sebagian
-2. bisa mengakses Data Siswa tanpa login (bahaya) -> buat agar aplikasi wajib memasukkan username dan password
 
-fixed = delete sudah bisa, menggunakan GET method, tidak bisa jika pakai POST method
+
+minus aplikasi (selain bug) :
+1. bisa mengakses aplikasi tanpa login (bahaya) -> buat agar aplikasi wajib memasukkan username dan password
+2. ketika hapus data belum ada alert/peringatan
+
+
+goal aplikasi, bismillah :)
+1. desain menarik
+2. bisa menambah, mengedit, menghapus data siswa
+3. bisa cetak sertifikat
+4. bisa download file dalam bentuk excel
+5. batas waktu logout otomatis ketika web dijalankan
+
+
+fixed :
+-> delete sudah bisa menggunakan GET method, tidak bisa jika pakai POST method
