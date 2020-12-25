@@ -1,4 +1,8 @@
 <?php
+session_start();
+if( ! isset($_SESSION['username'])){
+  header("location: index.php");
+}
 $host = "127.0.0.1"; // Nama hostnya
 $username = "root"; // Username
 $password = ""; // Password (Isi jika menggunakan password)

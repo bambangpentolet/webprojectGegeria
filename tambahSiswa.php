@@ -1,3 +1,10 @@
+<?
+session_start();
+if( ! isset($_SESSION['username'])){
+  header("location: index.php");
+}
+?>
+
 <html>
 <head>
     <title>Tambah Siswa</title>

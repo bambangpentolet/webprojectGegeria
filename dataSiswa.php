@@ -1,4 +1,8 @@
 <?php
+session_start();
+if( ! isset($_SESSION['username'])){
+  header("location: index.php");
+}
 // Create database connection using config file
 include_once("koneksiCrud_input_data_siswa.php");
 include("modularitas.php");

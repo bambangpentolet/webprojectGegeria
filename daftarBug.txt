@@ -4,11 +4,13 @@ padahal data tersebut tidak masuk di database karena primary key nya sama
 
 
 minus aplikasi (selain bug) :
-1. bisa mengakses aplikasi tanpa login (bahaya) -> buat agar aplikasi wajib memasukkan username dan password
+1. session belum bisa, anonim bisa mengakses aplikasi tanpa login (bahaya) -> buat agar aplikasi wajib memasukkan username dan password
 2. ketika hapus data belum ada alert/peringatan
 3. belum ada edit NIS, buat agar edit NIS mengeluarkan alert/peringatan
 4. ketika menambahkan data, data tersebut urut dari angka primary key yang terbesar
 -> buat agar urut dari primary key yang terkecil
+5. saat ubah data, padahal kan data tidak berubah, tapi tidak keluar misal "data tidak berubah"
+6. saat ubah data berhasil, tiba2 otomatis menuju ke halaman Data Siswa, itu coba terapkan juga di tambah data siswa
 
 
 goal aplikasi, bismillah :)

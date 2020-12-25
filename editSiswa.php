@@ -1,4 +1,8 @@
 <?php
+session_start();
+if( ! isset($_SESSION['username'])){
+  header("location: index.php");
+}
 include("koneksiCrud_input_data_siswa.php");
 
 $sql = mysqli_query($mysqli,"SELECT * FROM siswa WHERE nis='$_GET[nis]'");
