@@ -1,10 +1,10 @@
 <?php
-include("koneksiCrud_input_data_siswa.php");
+include_once("koneksiCrud_input_data_siswa.php");
 
-if( isset($_POST['nis']) ){
+if( isset($_GET['nis']) ){
 
     // ambil id dari query string
-    $nis = $_POST['nis'];
+    $nis = $_GET['nis'];
 
     // buat query hapus
     $sql = "DELETE FROM siswa WHERE nis=$nis";
