@@ -1,5 +1,6 @@
 <?php
 include_once("koneksiCrud_input_data_siswa.php");
+include("session.php"); // session start diambil dari sini
 
 if( isset($_GET['nis']) ){
 

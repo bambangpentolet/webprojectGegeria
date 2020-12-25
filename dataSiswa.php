@@ -1,16 +1,7 @@
 <?php
-session_start(); // Start session nya
-// Kita cek apakah user sudah login atau belum
-// Cek nya dengan cara cek apakah terdapat session username atau tidak
-if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti dia belum login 
-    header("location: index.php"); // Kita Redirect ke halaman index.php karena belum login
-}
-?>
-
-<?php
 // Create database connection using config file
 include_once("koneksiCrud_input_data_siswa.php");
-include("modularitas.php");
+include("modularitas.php"); // session start diambil dari sini
 
 // Fetch all siswa data from database
 $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");

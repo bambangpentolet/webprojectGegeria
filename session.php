@@ -6,17 +6,3 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
   header("location: index.php"); // Kita Redirect ke halaman index.php karena belum login
 }
 ?>
-<html>
-<head>
-<title> Modularitas </title>
-</head>
-<body>
-<?php
-// Modularitas
-
- ?>
-<a href = "welcome.php">Home</a>
-<a href = "dataSiswa.php">Data Siswa</a>
-
-</body>
-</html>
