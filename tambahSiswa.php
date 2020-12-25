@@ -48,7 +48,7 @@
         $result = mysqli_query($mysqli, "INSERT INTO siswa(nis,nama,alamat,jurusan) VALUES('$nis','$nama','$alamat','$jurusan')");
 
         // Show message when user added
-        echo "User added successfully. <a href='dataSiswa.php'>Lihat Daftar Siswa</a>";
+        echo "Tambah Siswa berhasil";
     }
     ?>
 </body>

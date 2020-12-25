@@ -14,8 +14,8 @@ $no_urut = 0;
 </head>
 
 <body>
-<a href="tambahSiswa.php">Tambah Siswa</a><br/><br/>
 <h3>Data Siswa yang ikut PSG</h3>
+<a href="tambahSiswa.php">Tambah Siswa +</a><br/><br/>
     <table width='50%' border=1>
 
     <tr>
@@ -30,7 +30,7 @@ $no_urut = 0;
         echo "<td>".$datasiswa['nama']."</td>";
         echo "<td>".$datasiswa['alamat']."</td>";
         echo "<td>".$datasiswa['jurusan']."</td>";    
-        echo "<td><a href='editSiswa.php?nis=$datasiswa[nis]'>Edit</a> | <a href='deleteSiswa.php?nis=$datasiswa[nis]'>Delete</a></td></tr>";
+        echo "<td><a href='editSiswa.php?nis=$datasiswa[nis]'>Edit</a> | <a href='deleteSiswa.php?nis=$datasiswa[nis]'>Hapus</a></td></tr>";
     }
     ?>
     </table>
