@@ -21,4 +21,4 @@ goal aplikasi, bismillah :)
 
 
 fixed :
--> delete sudah bisa menggunakan GET method, tidak bisa jika pakai POST method
+-> delete sudah bisa menggunakan GET method, tidak bisa jika pakai POST method, itu kenapa ya?
