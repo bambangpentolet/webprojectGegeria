@@ -18,18 +18,18 @@ $data = mysqli_fetch_array($sql);
         <table>
             <tr> 
                 <td>Nama</td>
-                <td><input type="text" name="nama" value=<?php echo $data['nama'];?>></td>
+                <td><input type="text" name="nama" value="<?php echo $data['nama'];?>"/></td>
             </tr>
             <tr> 
                 <td>Alamat</td>
-                <td><input type="text" name="alamat" value=<?php echo $data['alamat'];?>></td>
+                <td><input type="text" name="alamat" value="<?php echo $data['alamat'];?>"/></td>
             </tr>
             <tr> 
                 <td>Jurusan</td>
-                <td><input type="text" name="jurusan" value=<?php echo $data['jurusan'];?>></td>
+                <td><input type="text" name="jurusan" value="<?php echo $data['jurusan'];?>"/></td>
             </tr>
             <tr>
-                <td><input type="hidden" name="nis" value=<?php echo $_GET['nis'];?>></td>
+                <td><input type="hidden" name="nis" value="<?php echo $_GET['nis'];?>"/></td>
                 <td><input type="submit" name="update" value="Update"></td>
             </tr>
         </table>

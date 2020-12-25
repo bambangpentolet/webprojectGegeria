@@ -1,6 +1,5 @@
 bug aplikasi web :
-1. ketika edit record, data nama menjadi hilang sebagian
-2. ketika menambahkan data dengan primary key yang sama, tetap muncul "Tambah Siswa berasil"
+1. ketika menambahkan data dengan primary key yang sama, tetap muncul "Tambah Siswa berasil"
 padahal data tersebut tidak masuk di database karena primary key nya sama 
 
 
@@ -9,7 +8,7 @@ minus aplikasi (selain bug) :
 2. ketika hapus data belum ada alert/peringatan
 3. belum ada edit NIS, buat agar edit NIS mengeluarkan alert/peringatan
 4. ketika menambahkan data, data tersebut urut dari angka primary key yang terbesar
--> buat agar urut dari primary key yang terkecil 
+-> buat agar urut dari primary key yang terkecil
 
 
 goal aplikasi, bismillah :)
@@ -18,7 +17,9 @@ goal aplikasi, bismillah :)
 3. bisa cetak sertifikat
 4. bisa download file dalam bentuk excel
 5. batas waktu logout otomatis ketika web dijalankan
+6. membuat kolom pencarian data
 
 
 fixed :
 -> delete sudah bisa menggunakan GET method, tidak bisa jika pakai POST method, itu kenapa ya?
+-> data pada halaman edit sudah muncul sempurna
