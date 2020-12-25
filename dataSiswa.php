@@ -1,4 +1,14 @@
 <?php
+session_start(); // Start session nya
+// Kita cek apakah user sudah login atau belum
+// Cek nya dengan cara cek apakah terdapat session username atau tidak
+if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti dia belum login 
+    echo "Anda belum login";
+    header("location: index.php"); // Kita Redirect ke halaman index.php karena belum login
+}
+?>
+
+<?php
 // Create database connection using config file
 include_once("koneksiCrud_input_data_siswa.php");
 include("modularitas.php");
@@ -19,7 +29,7 @@ $no_urut = 0;
     <table width='50%' border=1>
 
     <tr>
-    <th>No.</th> <th>NIS</th> <th>Nama</th> <th>Alamat</th> <th>Jurusan</th> <th>Update</th>
+    <th>No.</th> <th>NIS</th> <th>Nama</th> <th>Alamat</th> <th>Jurusan</th> <th>Aksi</th>
     </tr>
     <?php  
     while($datasiswa = mysqli_fetch_array($result)) {         

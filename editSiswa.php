@@ -1,40 +1,10 @@
 <?php
-// include database connection file
 include("koneksiCrud_input_data_siswa.php");
 
-// Check if form is submitted for user update, then redirect to homepage after update
-if(isset($_POST['update']))
-{   
-
-    print_r($_POST);
-    $nis = $_POST['nis'];
-
-    $nama=$_POST['nama'];
-    $alamat=$_POST['alamat'];
-    $jurusan=$_POST['jurusan'];
-
-    // update user data
-    $result = mysqli_query($mysqli, "UPDATE siswa SET nama='$nama',alamat='$alamat',jurusan='$jurusan' WHERE nis='$nis'");
-
-    // Redirect to homepage to display updated user in list
-    header("Location: dataSiswa.php");
-}
+$sql = mysqli_query($mysqli,"SELECT * FROM siswa WHERE nis='$_GET[nis]'");
+$data = mysqli_fetch_array($sql);
 ?>
-<?php
-// Display selected user data based on id
-// Getting id from url
-$nis = $_GET['nis'];
 
-// Fetech user data based on id
-$result = mysqli_query($mysqli, "SELECT * FROM siswa WHERE nis=$nis");
-
-while($user_data = mysqli_fetch_array($result))
-{
-    $nama = $user_data['nama'];
-    $alamat = $user_data['alamat'];
-    $jurusan = $user_data['jurusan'];
-}
-?>
 <html>
 <head>  
     <title>Edit Data Siswa</title>
@@ -44,19 +14,19 @@ while($user_data = mysqli_fetch_array($result))
     <a href="dataSiswa.php">kembali ke Data Siswa</a>
     <br/><br/>
 
-    <form name="update_user" method="post" action="editSiswa.php">
-        <table border="0">
+    <form action="" method="post">
+        <table>
             <tr> 
                 <td>Nama</td>
-                <td><input type="text" name="nama" value=<?php echo $nama;?>></td>
+                <td><input type="text" name="nama" value=<?php echo $data['nama'];?>></td>
             </tr>
             <tr> 
                 <td>Alamat</td>
-                <td><input type="text" name="alamat" value=<?php echo $alamat;?>></td>
+                <td><input type="text" name="alamat" value=<?php echo $data['alamat'];?>></td>
             </tr>
             <tr> 
                 <td>Jurusan</td>
-                <td><input type="text" name="jurusan" value=<?php echo $jurusan;?>></td>
+                <td><input type="text" name="jurusan" value=<?php echo $data['jurusan'];?>></td>
             </tr>
             <tr>
                 <td><input type="hidden" name="nis" value=<?php echo $_GET['nis'];?>></td>
@@ -64,5 +34,24 @@ while($user_data = mysqli_fetch_array($result))
             </tr>
         </table>
     </form>
+
+    <?php
+    include("koneksiCrud_input_data_siswa.php");
+
+    if(isset($_POST['update'])){
+
+        $nama=$_POST['nama'];
+        $alamat=$_POST['alamat'];
+        $jurusan=$_POST['jurusan'];
+
+        $nis = $_GET['nis'];
+
+        mysqli_query($mysqli, "UPDATE siswa SET nama='$nama',alamat='$alamat',jurusan='$jurusan' WHERE nis='$nis'");
+
+        echo "Data siswa telah berubah";
+        echo "<meta http-equiv=refresh content=1;URL='dataSiswa.php'>";
+        
+    }
+?>
 </body>
 </html>
