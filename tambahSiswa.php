@@ -41,12 +41,12 @@ if( ! isset($_SESSION['username'])){
 
     <?php
     // Check If form submitted, insert form data into users table.
-    if(isset($_POST['Submit'])) {
+    $inputData = isset($_POST['Submit']);
+    if($inputData) {
         $nis = $_POST['nis'];
         $nama = $_POST['nama'];
         $alamat = $_POST['alamat'];
         $jurusan = $_POST['jurusan'];
-
         // include database connection file
         include_once("koneksiCrud_input_data_siswa.php");
 

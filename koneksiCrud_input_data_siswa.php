@@ -1,7 +1,4 @@
 <?php
-if( ! isset($_SESSION['username'])){
-  header("location: index.php");
-}
 /* database for crud*/
 $host = "127.0.0.1";
 $username = "root";
