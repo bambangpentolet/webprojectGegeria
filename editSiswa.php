@@ -1,6 +1,5 @@
 <?php
 include("koneksiCrud_input_data_siswa.php");
-include("session.php"); // session ambil dari sini
 
 $sql = mysqli_query($mysqli,"SELECT * FROM siswa WHERE nis='$_GET[nis]'");
 $data = mysqli_fetch_array($sql);

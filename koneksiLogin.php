@@ -1,6 +1,4 @@
 <?php
-include("session.php"); // session start diambil dari sini
-
 $host = "127.0.0.1"; // Nama hostnya
 $username = "root"; // Username
 $password = ""; // Password (Isi jika menggunakan password)

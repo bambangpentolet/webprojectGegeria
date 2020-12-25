@@ -1,7 +1,7 @@
 <?php
 // Create database connection using config file
 include_once("koneksiCrud_input_data_siswa.php");
-include("modularitas.php"); // session start diambil dari sini
+include("modularitas.php");
 
 // Fetch all siswa data from database
 $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");
