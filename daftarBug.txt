@@ -4,13 +4,15 @@ padahal data tersebut tidak masuk di database karena primary key nya sama
 
 
 minus aplikasi (selain bug) :
-1. session belum bisa, anonim bisa mengakses aplikasi tanpa login (bahaya) -> buat agar aplikasi wajib memasukkan username dan password
-2. ketika hapus data belum ada alert/peringatan
-3. belum ada edit NIS, buat agar edit NIS mengeluarkan alert/peringatan
-4. ketika menambahkan data, data tersebut urut dari angka primary key yang terbesar
+1. ketika hapus data belum ada alert/peringatan
+2. belum ada edit NIS, buat agar edit NIS mengeluarkan alert/peringatan
+3. ketika menambahkan data, data tersebut urut dari angka primary key yang terbesar
 -> buat agar urut dari primary key yang terkecil
-5. saat ubah data, padahal kan data tidak berubah, tapi tidak keluar misal "data tidak berubah"
-6. saat ubah data berhasil, tiba2 otomatis menuju ke halaman Data Siswa, itu coba terapkan juga di tambah data siswa
+4. data padahal sama, tapi dianggap "Data Siswa Telah berubah", harusnya kasih alert "data tidak mengalami perubahan"
+5. data kosong harusnya tidak bisa ditambah, ini malah masuk aja ke database,
+-> dengan value NIS "0" sedangkan lainnya kosong
+6. sesudah tambah data baru, seharusnya diam di tempat atau pergi ke data siswa,
+-> ini malah pergi ke halaman welcome
 
 
 goal aplikasi, bismillah :)
@@ -25,3 +27,4 @@ goal aplikasi, bismillah :)
 fixed :
 -> delete sudah bisa menggunakan GET method, tidak bisa jika pakai POST method, itu kenapa ya?
 -> data pada halaman edit sudah muncul sempurna
+-> session sudah bisa
