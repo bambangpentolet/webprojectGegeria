@@ -3,7 +3,7 @@ session_start();
 if( ! isset($_SESSION['username'])){
   header("location: index.php");
 }
-include("koneksiCrud_input_data_siswa.php");
+require("koneksiCrud_input_data_siswa.php");
 
 $sql = mysqli_query($mysqli,"SELECT * FROM siswa WHERE nis='$_GET[nis]'");
 $data = mysqli_fetch_array($sql);
@@ -40,7 +40,7 @@ $data = mysqli_fetch_array($sql);
     </form>
 
     <?php
-    include("koneksiCrud_input_data_siswa.php");
+    require("koneksiCrud_input_data_siswa.php");
 
     if(isset($_POST['update'])){
 

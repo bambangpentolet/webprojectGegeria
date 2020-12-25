@@ -3,7 +3,7 @@ session_start();
 if( ! isset($_SESSION['username'])){
   header("location: index.php");
 }
-include_once("koneksiCrud_input_data_siswa.php");
+require_once("koneksiCrud_input_data_siswa.php");
 
 if( isset($_GET['nis']) ){
 

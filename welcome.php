@@ -5,7 +5,7 @@ session_start(); // Start session nya
 if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti dia belum login
   header("location: index.php"); // Kita Redirect ke halaman index.php karena belum login
 }
-include ("modularitas.php");
+require ("modularitas.php");
 ?>
 <html>
 <head>

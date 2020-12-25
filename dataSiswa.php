@@ -4,8 +4,8 @@ if( ! isset($_SESSION['username'])){
   header("location: index.php");
 }
 // Create database connection using config file
-include_once("koneksiCrud_input_data_siswa.php");
-include("modularitas.php");
+require_once("koneksiCrud_input_data_siswa.php");
+require ("modularitas.php");
 
 // Fetch all siswa data from database
 $result = mysqli_query($mysqli, "SELECT * FROM siswa ORDER BY nis DESC");

@@ -48,7 +48,7 @@ if( ! isset($_SESSION['username'])){
         $alamat = $_POST['alamat'];
         $jurusan = $_POST['jurusan'];
         // include database connection file
-        include_once("koneksiCrud_input_data_siswa.php");
+        require_once("koneksiCrud_input_data_siswa.php");
 
         // Insert user data into table
         $result = mysqli_query($mysqli, "INSERT INTO siswa(nis,nama,alamat,jurusan) VALUES('$nis','$nama','$alamat','$jurusan')");
